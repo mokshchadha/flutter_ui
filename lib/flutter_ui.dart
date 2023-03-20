@@ -1,7 +1,9 @@
 library flutter_ui;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+// Widgets Export
+export 'src/widgets/ui_text.dart';
+export 'src/widgets/ui_button.dart';
+export 'src/widgets/ui_input_field.dart';
+
+// Colors Export
+export 'src/shared/colors.dart';
