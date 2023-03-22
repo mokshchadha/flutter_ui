@@ -1,4 +1,4 @@
-import 'package:flutter_ui/flutter_ui.dart';
+import 'package:source_ui/source_ui.dart';
 import 'package:flutter/material.dart';
 
 import 'example_view.dart';
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primaryColor: kcPrimaryColor,
+        primaryColor: sfPrimaryColor,
       ),
       home: const ExampleView(),
     );

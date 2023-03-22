@@ -1,4 +1,4 @@
-import 'package:flutter_ui/flutter_ui.dart';
+import 'package:source_ui/source_ui.dart';
 import 'package:flutter/material.dart';
 
 class ExampleView extends StatelessWidget {
@@ -10,9 +10,9 @@ class ExampleView extends StatelessWidget {
       body: ListView(
         padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 30),
         children: [
-          BoxText.headingOne('Design System'),
+          const SFText.headingOne('Design System'),
           verticalSpaceSmall,
-          Divider(),
+          const Divider(),
           verticalSpaceSmall,
           ...buttonWidgets,
           ...textWidgets,
@@ -23,82 +23,72 @@ class ExampleView extends StatelessWidget {
   }
 
   List<Widget> get textWidgets => [
-        BoxText.headline('Text Styles'),
+        const SFText.headline('Text Styles'),
         verticalSpaceMedium,
-        BoxText.headingOne('Heading One'),
+        const SFText.headingOne('Heading One'),
         verticalSpaceMedium,
-        BoxText.headingTwo('Heading Two'),
+        const SFText.headingTwo('Heading Two'),
         verticalSpaceMedium,
-        BoxText.headingThree('Heading Three'),
+        const SFText.headingThree('Heading Three'),
         verticalSpaceMedium,
-        BoxText.headline('Headline'),
+        const SFText.headline('Headline'),
         verticalSpaceMedium,
-        BoxText.subheading('This will be a sub heading to the headling'),
+        const SFText.subheading('This will be a sub heading to the headling'),
         verticalSpaceMedium,
-        BoxText.body('Body Text that will be used for the general body'),
+        SFText.body('Body Text that will be used for the general body'),
         verticalSpaceMedium,
-        BoxText.caption('This will be the caption usually for smaller details'),
+        const SFText.caption(
+            'This will be the caption usually for smaller details'),
         verticalSpaceMedium,
       ];
 
   List<Widget> get buttonWidgets => [
-        BoxText.headline('Buttons'),
+        const SFText.headline('Buttons'),
         verticalSpaceMedium,
-        BoxText.body('Normal'),
+        SFText.body('Normal'),
         verticalSpaceSmall,
-        BoxButton(
-          title: 'SIGN IN',
-        ),
+        const SFButton(title: 'SIGN IN'),
         verticalSpaceSmall,
-        BoxText.body('Disabled'),
+        SFText.body('Disabled'),
         verticalSpaceSmall,
-        BoxButton(
-          title: 'SIGN IN',
-          disabled: true,
-        ),
+        const SFButton(title: 'SIGN IN', disabled: true),
         verticalSpaceSmall,
-        BoxText.body('Busy'),
+        SFText.body('Busy'),
         verticalSpaceSmall,
-        BoxButton(
-          title: 'SIGN IN',
-          busy: true,
-        ),
+        const SFButton(title: 'SIGN IN', busy: true),
         verticalSpaceSmall,
-        BoxText.body('Outline'),
+        SFText.body('Outline'),
         verticalSpaceSmall,
-        BoxButton.outline(
+        const SFButton.outline(
           title: 'Select location',
-          leading: Icon(
-            Icons.send,
-            color: kcPrimaryColor,
-          ),
+          leading: Icon(Icons.send, color: sfPrimaryColor),
         ),
         verticalSpaceMedium,
       ];
 
   List<Widget> get inputFields => [
-        BoxText.headline('Input Field'),
+        const SFText.headline('Input Field'),
         verticalSpaceSmall,
-        BoxText.body('Normal'),
+        SFText.body('Normal'),
         verticalSpaceSmall,
-        BoxInputField(
+        SFInputField(
           controller: TextEditingController(),
           placeholder: 'Enter Password',
         ),
         verticalSpaceSmall,
-        BoxText.body('Leading Icon'),
+        SFText.body('Leading Icon'),
         verticalSpaceSmall,
-        BoxInputField(
+        SFInputField(
           controller: TextEditingController(),
-          leading: Icon(Icons.reset_tv),
+          leading: const Icon(Icons.reset_tv),
           placeholder: 'Enter TV Code',
         ),
         verticalSpaceSmall,
-        BoxText.body('Trailing Icon'),
+        SFText.body('Trailing Icon'),
         verticalSpaceSmall,
-        BoxInputField(
+        SFInputField(
           controller: TextEditingController(),
-          trailing: Icon(Icons.clear_outlined),
+          trailing: const Icon(Icons.clear_outlined),
           placeholder: 'Search for things',
         ),
       ];
